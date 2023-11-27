@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { FaEllipsisV } from 'react-icons/fa';
+import { IoEllipsisVerticalCircle } from "react-icons/io5"
 
 const TaskItem = ({ task, onEdit, onDelete }) => {
   const [isEditing, setIsEditing] = useState(false);
@@ -27,14 +27,31 @@ const TaskItem = ({ task, onEdit, onDelete }) => {
     <div className={`item ${isEditing && 'editing'}`}>
       <div className="task-header">
         <div className="menu-icon" onClick={handleMenuClick}>
-          <FaEllipsisV />
+            <IoEllipsisVerticalCircle />
         </div>
         {isMenuOpen && (
           <div className="menu">
-            <div className="edit-option" onClick={handleEditClick}>
+            <div
+              className="edit-option"
+              onClick={handleEditClick}
+              style={{
+                color: 'green', 
+                cursor: 'pointer', 
+              }}
+              onMouseOver={(e) => { e.target.style.color = 'red' }}  
+              onMouseOut={(e) => { e.target.style.color = 'green' }}  
+            >
               Edit
             </div>
-            <div className="delete-option" onClick={() => onDelete(task.id)}>
+            <div className="delete-option" 
+              onClick={() => onDelete(task.id)}
+              style={{
+                color: 'tomato', 
+                cursor: 'pointer', 
+              }}
+              onMouseOver={(e) => { e.target.style.color = 'red' }}  
+              onMouseOut={(e) => { e.target.style.color = 'tomato' }}
+            >
               Delete
             </div>
           </div>
