@@ -1,0 +1,46 @@
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3498db;
+    padding: 10px;
+    color: #fff;
+  }
+  
+  .left,
+  .right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .left > * {
+    margin-right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .right > * {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Hover effects */
+  .left > *:hover,
+  .right > *:hover {
+    color: #ffcd00;
+  }
+  
+  /* Active (selected) effect */
+  .left > .active,
+  .right > .active {
+    color: #ffcd00;
+    font-weight: bold;
+  }
+  
+  /* Optional: Add transition for smooth effects */
+  .left > *,
+  .right > * {
+    transition: color 0.3s ease-in-out;
+  }
+  

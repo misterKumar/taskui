@@ -1,0 +1,87 @@
+
+.item {
+    position: relative;
+    background-color: #fff;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    transition: background-color 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .item:hover {
+    background-color: #f8f8f8;
+  }
+  
+  .task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .menu-icon {
+    cursor: pointer;
+    font-size: 20px;
+    color: #3498db;
+  }
+  
+  .menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .item:hover .menu-icon + .menu {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .menu div {
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .menu .edit-option {
+    color: #3498db; 
+  }
+  
+  .menu .delete-option {
+    color: #e74c3c; 
+  }
+  
+  .menu div:hover {
+    background-color: #f8f8f8;
+  }
+  .edit-form {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .edit-form input {
+    flex: 1;
+    padding: 8px;
+    margin-right: 10px;
+  }
+  
+  .edit-form button {
+    background-color:rgb(95, 21, 21);
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+ 
+  
